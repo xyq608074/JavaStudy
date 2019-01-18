@@ -1,0 +1,3 @@
+#session创建持久化数据
+
+当session被创建后 有JSESSIONID 但是JSESSIONID是在cookie中存储  当客户端浏览器被关闭的时候 cookie 因为是会话级别自动被销毁没有了 session数据,所以需要持久化cookie来持久化session数据

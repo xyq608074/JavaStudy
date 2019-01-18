@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="dynamic" namespace="/dynamic" extends="struts-default">
+        <!--
+            action 中的name属性带* 标识符可以组成:
+                如:  dynamic_add,dynamic_edit,dynamic_delete,dynamic_find
+            method {num}  里面的数字代表从下划线后面 取出相应的关键词
+                如: add, edit, delete,find
+        -->
+        <action name="dynamic_*" class="struts.dynamic.DynamicAction" method="{1}">
+            <result name="success">/hello.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
     <!--国际化 解决post乱码-->
@@ -10,6 +10,7 @@
 
     <!--热加载主配置 不需要重启即可生效   方便开发调试提供更多的错误信息-->
     <constant name="struts.devMode" value="true"></constant>
+
     <!--
         package: 将Action配置封装,就是可以在package中可以放入很多Action
             name属性: 给包起个名字,起到标识作用,随便起不能重复
@@ -34,4 +35,6 @@
             <result name="success" type="">/hello.jsp</result>
         </action>
     </package>
+
+    <include file="struts/dynamic/struts.xml"></include>
 </struts>

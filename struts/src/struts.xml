@@ -5,16 +5,33 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <!--国际化 解决post乱码-->
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+
+    <!--热加载主配置 不需要重启即可生效   方便开发调试提供更多的错误信息-->
+    <constant name="struts.devMode" value="true"></constant>
     <!--
         package: 将Action配置封装,就是可以在package中可以放入很多Action
-            属性:
-                name: 给包起个名字,起到标识作用,随便起不能重复
-                namespace: 给action的访问路径中,定义一个命名空间
-                extends: 继承一个指定包  *必写
+            name属性: 给包起个名字,起到标识作用,随便起不能重复
+            namespace属性: 给action的访问路径中,定义一个命名空间
+            extends属性: 继承一个指定包  *必写
     -->
     <package name="hello" namespace="/hello" extends="struts-default">
-        <action name="HelloWorld" class="struts.helloworld.HelloWorld" method="HelloAction">
-            <result name="success">/hello.jsp</result>
+        <!--
+            action元素: 配置action类
+                name属性: 决定action的访问资源名
+                class属性: action类的完整类名
+                method属性: 指定调用Action哪个方法来处理请求
+        -->
+        <action name="HelloWorld" class="struts.helloworld.HelloWorldAction" method="Hello">
+            <!--
+                result元素 结果配置
+                    name属性: 表示结果处理的名称,与action方法的返回值对应
+                    type属性: 指定调用哪一个result类来处理结果 默认使用转发
+
+                标签体:填写页面相对路径
+            -->
+            <result name="success" type="">/hello.jsp</result>
         </action>
     </package>
 </struts>

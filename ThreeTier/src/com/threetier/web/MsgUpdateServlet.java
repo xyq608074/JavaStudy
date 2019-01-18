@@ -24,6 +24,7 @@ public class MsgUpdateServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        //重定向到servlet页面
         response.sendRedirect("/messageservlet");
     }
 

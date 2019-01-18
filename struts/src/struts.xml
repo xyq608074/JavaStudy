@@ -5,6 +5,13 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <!--
+        package: 将Action配置封装,就是可以在package中可以放入很多Action
+            属性:
+                name: 给包起个名字,起到标识作用,随便起不能重复
+                namespace: 给action的访问路径中,定义一个命名空间
+                extends: 继承一个指定包  *必写
+    -->
     <package name="hello" namespace="/hello" extends="struts-default">
         <action name="HelloWorld" class="struts.helloworld.HelloWorld" method="HelloAction">
             <result name="success">/hello.jsp</result>

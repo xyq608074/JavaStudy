@@ -15,6 +15,7 @@
         -->
         <action name="dynamic_*" class="struts.dynamic.DynamicAction" method="{1}">
             <result name="success">/hello.jsp</result>
+            <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>
 </struts>

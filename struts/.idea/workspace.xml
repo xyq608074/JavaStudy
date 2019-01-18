@@ -6,32 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36b7f7b4-f85f-482a-b0d6-aff21e668864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/asm_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/struts/helloworld/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/asm-5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/asm-commons-5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/asm-tree-5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-lang3-3.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/freemarker-2.3.28.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javassist-3.20.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/log4j-api-2.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/ognl-3.1.21.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/struts2-convention-plugin-2.5.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/struts2-core-2.5.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/src/struts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/src/struts/helloworld/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/web/WEB-INF/lib/struts2-convention-plugin-2.5.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../struts2/web/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThreeTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreeTier/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="36b7f7b4-f85f-482a-b0d6-aff21e668864" name="Default Changelist" comment="简单的struct2写法">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/struts_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struts.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreeTier/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,6 +52,7 @@
         <counts>
           <entry key="java" value="81" />
           <entry key="jsp" value="17" />
+          <entry key="txt" value="14" />
           <entry key="xml" value="87" />
         </counts>
       </usages-collector>
@@ -75,6 +60,7 @@
         <counts>
           <entry key="JAVA" value="81" />
           <entry key="JSP" value="17" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="87" />
         </counts>
       </usages-collector>
@@ -103,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="32" />
+            <state relative-caret-position="76">
+              <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
@@ -230,7 +216,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547793245089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547793475164" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/struts2-core-2.5.20.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -306,15 +292,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547783135846</updated>
-      <workItem from="1547783143570" duration="684000" />
+      <workItem from="1547783143570" duration="872000" />
     </task>
+    <task id="LOCAL-00001" summary="简单的struct2写法">
+      <created>1547793359217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547793359217</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="684000" />
+    <option name="totallyTimeSpent" value="872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -355,6 +350,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="简单的struct2写法" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单的struct2写法" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/struts2/lib/struts2-dom-api.jar!/resources/dtds/struts-2.0.dtd">
       <provider selected="true" editor-type-id="text-editor">
@@ -386,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="76">
+          <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />

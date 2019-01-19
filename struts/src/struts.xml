@@ -37,4 +37,5 @@
     </package>
 
     <include file="struts/dynamic/struts.xml"></include>
+    <include file="struts/jump/struts.xml"></include>
 </struts>

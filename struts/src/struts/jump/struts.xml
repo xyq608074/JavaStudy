@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="jump" namespace="/jump" extends="struts-default">
+
+        <!--  type="dispatcher"  转发  -->
+        <action name="jump1" class="struts.jump.Jump1Action" method="execute">
+            <result name="success" type="dispatcher">/hello.jsp</result>
+        </action>
+
+        <!--  type="redirect" 重定向 -->
+        <action name="jump2" class="struts.jump.Jump2Action" method="execute">
+            <result name="success" type="redirect">/hello.jsp</result>
+        </action>
+    </package>
+</struts>

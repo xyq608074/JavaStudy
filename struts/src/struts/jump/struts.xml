@@ -17,5 +17,21 @@
         <action name="jump2" class="struts.jump.Jump2Action" method="execute">
             <result name="success" type="redirect">/hello.jsp</result>
         </action>
+
+        <!-- type="chain" 转发到Action-->
+        <action name="jump3" class="struts.jump.Jump3Action" method="execute">
+            <result name="success" type="chain">
+                <param name="actionName">jump1</param>
+                <param name="namespace">/jump</param>
+            </result>
+        </action>
+
+        <!--type="redirectAction"-->
+        <action name="jump4" class="struts.jump.Jump4Action" method="execute">
+            <result name="success" type="redirectAction">
+                <param name="actionName">jump1</param>
+                <param name="namespace">/jump</param>
+            </result>
+        </action>
     </package>
 </struts>

@@ -36,6 +36,8 @@
         </action>
     </package>
 
+    <!--dynamic 动态加载struts-->
     <include file="struts/dynamic/struts.xml"></include>
+    <!--四种跳转方式-->
     <include file="struts/jump/struts.xml"></include>
 </struts>

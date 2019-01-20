@@ -42,4 +42,6 @@
     <include file="struts/jump/struts.xml"></include>
     <!--ServletAPI-->
     <include file="struts/servletapi/struts.xml"></include>
+    <!--form 提交-->
+    <include file="struts/form/struts.xml"></include>
 </struts>

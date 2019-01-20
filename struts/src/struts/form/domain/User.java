@@ -1,11 +1,13 @@
 package struts.form.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class User {
     private String name;
     private Integer age;
     private Date birthday;
+    private List hobby;
 
     public String getName() {
         return name;
@@ -31,12 +33,21 @@ public class User {
         this.birthday = birthday;
     }
 
+    public List getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(List hobby) {
+        this.hobby = hobby;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", birthday=" + birthday +
+                ", hobby=" + hobby +
                 '}';
     }
 }

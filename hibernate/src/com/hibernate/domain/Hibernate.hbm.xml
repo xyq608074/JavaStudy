@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping><!-- 有一个 package 属性:可以在   里面写包完整类名路径  如果写了 下面的包名就不用写了 直接写类名-->
+
+    <!--
+        class  配置实体与表的关系
+            name: 完整类名  (如果上面写了package属性的完整包名,这里可以直接写类名)
+            table: 数据库表名
+    -->
+    <class name="com.hibernate.domain.Message" table="msg">
+
+        <!--
+            id 元素  配置主键映射
+                name 填写主键映射属性名
+                column 填写表中的主键名称
+        -->
+        <id name="id" column="id">
+
+            <!--generator  主键生成策略 -->
+            <generator class="native"></generator>
+        </id>
+
+        <!--
+            property 元素  配置除主键映射之外的映射
+                name 填写属性映射属性名
+                column 填写表中的列名称
+        -->
+        <property name="name" column="name"></property>
+        <property name="message" column="message"></property>
+        <property name="msgtime" column="msgtime"></property>
+    </class>
+</hibernate-mapping>

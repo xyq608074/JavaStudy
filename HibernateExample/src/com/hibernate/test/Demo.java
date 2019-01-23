@@ -2,6 +2,7 @@ package com.hibernate.test;
 
 
 import com.hibernate.domain.Message;
+import com.hibernate.utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -68,6 +69,27 @@ public class Demo {
 
         session.close();
         sf.close();
+    }
+
+    @Test
+    //通过工具类查找
+    public void utilselect(){
+        Session session = HibernateUtils.getCurrentSession();
+        Transaction transaction = session.beginTransaction();
+
+        //根据id查询一条
+        Message message = session.get(Message.class, 110);
+        System.out.println(message);
+
+        //查询所有
+        Query from_message = session.createQuery("from Message");
+
+        List<Message> list= from_message.list();
+        System.out.println(list);
+
+        transaction.commit();
+
+        session.close();
     }
 
     @Test

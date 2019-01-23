@@ -150,6 +150,9 @@ public class Demo {
         Session session2 = HibernateUtils.getCurrentSession();
 
         System.out.println(session1==session2);  //true
+
+        session1.close();
+        session2.close();
     }
 
     @Test
@@ -159,5 +162,8 @@ public class Demo {
         Session session2 = HibernateUtils.openSession();
 
         System.out.println(session1==session2); //false
+
+        session1.close();
+        session2.close();
     }
 }

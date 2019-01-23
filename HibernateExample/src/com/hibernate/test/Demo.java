@@ -143,9 +143,8 @@ public class Demo {
     }
 
     @Test
-    //测试getCurrentSession
+    //测试getCurrentSession  创建出来是否是同一个session  结果 true
     public void testCurrentSession(){
-
         //使用HibernateUtils.getCurrentSession()  必须在Hibernate.cfg.xml配置hibernate.current_session_context_class 值为 thread
         Session session1 = HibernateUtils.getCurrentSession();
         Session session2 = HibernateUtils.getCurrentSession();
@@ -154,6 +153,7 @@ public class Demo {
     }
 
     @Test
+    //测试openSession  创建出来是否是同一个session  结果 false
     public void testOpenSession(){
         Session session1 = HibernateUtils.openSession();
         Session session2 = HibernateUtils.openSession();

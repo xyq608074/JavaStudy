@@ -141,4 +141,23 @@ public class Demo {
         session.close();
         sf.close();
     }
+
+    @Test
+    //测试getCurrentSession
+    public void testCurrentSession(){
+
+        //使用HibernateUtils.getCurrentSession()  必须在Hibernate.cfg.xml配置hibernate.current_session_context_class 值为 thread
+        Session session1 = HibernateUtils.getCurrentSession();
+        Session session2 = HibernateUtils.getCurrentSession();
+
+        System.out.println(session1==session2);  //true
+    }
+
+    @Test
+    public void testOpenSession(){
+        Session session1 = HibernateUtils.openSession();
+        Session session2 = HibernateUtils.openSession();
+
+        System.out.println(session1==session2); //false
+    }
 }

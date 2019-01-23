@@ -9,6 +9,11 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
 
+
+        <!-- 如果想使用getCurrentSession()方法  必须写下列配置-->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+
         <mapping resource="com/hibernate/domain/Hibernate.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -16,16 +16,15 @@ public class MessageDaoImpl implements MessageDao {
 
     @Override
     public List<Message> find() {
-        Session session = HibernateUtils.openSession();
+        Session session = HibernateUtils.getCurrentSession();
         //HQL对象查询
         Query query = session.createQuery("from Message ");
         List<Message> list=query.list();
-        session.close();
         return list;
     }
 
     public List find(int id) {
-        Session session = HibernateUtils.openSession();
+        Session session = HibernateUtils.getCurrentSession();
         Query query = session.createQuery("from Message where id=:mid");
         query.setParameter("mid",id);
         List list = query.list();
@@ -35,32 +34,24 @@ public class MessageDaoImpl implements MessageDao {
 
     @Override
     public void add(Message message) {
-        Session session = HibernateUtils.openSession();
+        Session session = HibernateUtils.getCurrentSession();
         session.save(message);
-        session.close();
     }
 
     @Override
     public void del(int del) {
-        Session session = HibernateUtils.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = HibernateUtils.getCurrentSession();
         Message message = session.get(Message.class, del);
         session.delete(message);
-
-        transaction.commit();
-        session.close();
     }
 
     @Override
     public void update(Message message) {
-        Session session = HibernateUtils.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = HibernateUtils.getCurrentSession();
         Message msg = session.get(Message.class, message.getId());
         msg.setName(message.getName());
         msg.setMessage(message.getMessage());
         session.update(msg);
-        transaction.commit();
-        session.close();
     }
 
 

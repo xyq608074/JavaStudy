@@ -24,6 +24,15 @@ public class MessageDaoImpl implements MessageDao {
         return list;
     }
 
+    public List find(int id) {
+        Session session = HibernateUtils.openSession();
+        Query query = session.createQuery("from Message where id=:mid");
+        query.setParameter("mid",id);
+        List list = query.list();
+        return list;
+
+    }
+
     @Override
     public void add(Message message) {
         Session session = HibernateUtils.openSession();
@@ -38,6 +47,18 @@ public class MessageDaoImpl implements MessageDao {
         Message message = session.get(Message.class, del);
         session.delete(message);
 
+        transaction.commit();
+        session.close();
+    }
+
+    @Override
+    public void update(Message message) {
+        Session session = HibernateUtils.openSession();
+        Transaction transaction = session.beginTransaction();
+        Message msg = session.get(Message.class, message.getId());
+        msg.setName(message.getName());
+        msg.setMessage(message.getMessage());
+        session.update(msg);
         transaction.commit();
         session.close();
     }

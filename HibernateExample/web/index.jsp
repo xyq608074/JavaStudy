@@ -22,7 +22,7 @@
 
         <s:iterator value="#list">
         <li>
-            name: <s:property value="name"/>  time:<s:property value="msgtime"/>  <a href="#">修改</a> | <a href="/msg/msgdelete?del=<s:property value="id"/>">删除</a><br>
+            name: <s:property value="name"/>  time:<s:property value="msgtime"/>  <a href="/msg/msgfindone?update=<s:property value="id"/>">修改</a> | <a href="/msg/msgdelete?del=<s:property value="id"/>">删除</a><br>
             message: <s:property value="message"/>
         </li>
         </s:iterator>

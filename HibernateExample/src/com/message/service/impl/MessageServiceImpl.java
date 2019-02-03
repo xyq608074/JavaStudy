@@ -11,7 +11,7 @@ import java.util.List;
 public class MessageServiceImpl implements MessageService {
 
     @Override
-    public List<Message> messageFind() {
+    public List<Message> messageSelect() {
 
         MessageDao messageDao = new MessageDaoImpl();
         List<Message> messages = messageDao.find();
@@ -30,6 +30,19 @@ public class MessageServiceImpl implements MessageService {
     public void del(int del) {
         MessageDao messageDao = new MessageDaoImpl();
         messageDao.del(del);
+    }
+
+    @Override
+    public List messageFind(int updateid) {
+        MessageDaoImpl messageDao = new MessageDaoImpl();
+        List list = messageDao.find(updateid);
+        return list;
+    }
+
+    @Override
+    public void update(Message message) {
+        MessageDaoImpl messageDao = new MessageDaoImpl();
+        messageDao.update(message);
     }
 
 

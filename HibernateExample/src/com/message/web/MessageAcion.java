@@ -18,11 +18,21 @@ public class MessageAcion extends ActionSupport {
     //查询
     public String find(){
         MessageService messageService = new MessageServiceImpl();
-        List<Message> messages = messageService.messageFind();
+        List<Message> messages = messageService.messageSelect();
 
         //放到ActionContent
         ActionContext.getContext().put("list",messages);
         return "find";
+    }
+    //修改
+    public String findone(){
+        HttpServletRequest request = ServletActionContext.getRequest();
+        int update = Integer.parseInt(request.getParameter("update"));
+        MessageService messageService = new MessageServiceImpl();
+        List list = messageService.messageFind(update);
+
+        ActionContext.getContext().put("list",list);
+        return "findone";
     }
 
     public String add(){
@@ -52,4 +62,25 @@ public class MessageAcion extends ActionSupport {
         messageService.del(del);
         return "delete";
     }
+
+    //修改
+    public String update(){
+        MessageServiceImpl messageService = new MessageServiceImpl();
+        HttpServletRequest request = ServletActionContext.getRequest();
+
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String msg = request.getParameter("message");
+
+        Message message = new Message();
+        message.setId(id);
+        message.setName(name);
+        message.setMessage(msg);
+
+        messageService.update(message);
+
+        return "update";
+    }
+
 }

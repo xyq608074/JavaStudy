@@ -11,6 +11,8 @@
             <result name="find">/index.jsp</result>
             <result name="add" type="chain">msgfind</result>
             <result name="delete" type="chain">msgfind</result>
+            <result name="findone">/update.jsp</result>
+            <result name="update" type="chain">msgfind</result>
             <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>

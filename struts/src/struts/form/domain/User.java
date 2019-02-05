@@ -9,6 +9,16 @@ public class User {
     private Date birthday;
     private List hobby;
 
+    public User() {
+    }
+
+    public User(String name, Integer age, Date birthday, List hobby) {
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday;
+        this.hobby = hobby;
+    }
+
     public String getName() {
         return name;
     }

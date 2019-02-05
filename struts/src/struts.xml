@@ -44,4 +44,6 @@
     <include file="struts/servletapi/struts.xml"></include>
     <!--form 提交-->
     <include file="struts/form/struts.xml"></include>
+    <!--valuestack-->
+    <include file="struts/valuestack/struts.xml"></include>
 </struts>

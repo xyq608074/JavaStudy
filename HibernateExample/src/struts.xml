@@ -6,8 +6,10 @@
 
 <struts>
 
+    <constant name="struts.devMode" value="true" />
+
     <package name="msg" namespace="/msg" extends="struts-default">
-        <action name="msg*" class="com.message.web.MessageAcion" method="{1}">
+        <action name="msg*" class="com.message.web.MessageAction" method="{1}">
             <result name="find">/index.jsp</result>
             <result name="add" type="chain">msgfind</result>
             <result name="delete" type="chain">msgfind</result>

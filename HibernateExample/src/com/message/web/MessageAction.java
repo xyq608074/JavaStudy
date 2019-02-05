@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class MessageAcion extends ActionSupport {
+public class MessageAction extends ActionSupport {
 
 
     //查询
@@ -20,8 +20,8 @@ public class MessageAcion extends ActionSupport {
         MessageService messageService = new MessageServiceImpl();
         List<Message> messages = messageService.messageSelect();
 
-        //放到ActionContent
-        ActionContext.getContext().put("list",messages);
+        //放到ActionContent  放到值栈中
+        ActionContext.getContext().getValueStack().set("list",messages);
         return "find";
     }
     //修改

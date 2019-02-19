@@ -40,5 +40,24 @@ public class MessageAction extends ActionSupport implements ModelDriven<Msg> {
         return "findall";
     }
 
+    public String find(){
+        System.out.println("MessageAction find");
+        List<Msg> msglist=messageService.find(msg);
+        ActionContext.getContext().put("msglist",msglist);
+        return "find";
+    }
+
+    public String delete(){
+        System.out.println("MessageAction delete");
+        messageService.delete(msg);
+        return "delete";
+    }
+
+    public String update(){
+        System.out.println("MessageAction update");
+        messageService.update(msg);
+        return "update";
+    }
+
 
 }

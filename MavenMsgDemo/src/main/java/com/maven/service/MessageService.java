@@ -9,4 +9,10 @@ public interface MessageService {
     void save(Msg msg);
 
     List<Msg> findAll();
+
+    void delete(Msg msg);
+
+    List<Msg> find(Msg msg);
+
+    void update(Msg msg);
 }

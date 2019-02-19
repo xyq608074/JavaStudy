@@ -9,6 +9,9 @@
         <action name="msg*" class="messageAction" method="{1}">
             <result name="save" type="redirect">msgfindall</result>
             <result name="findall">index.jsp</result>
+            <result name="delete" type="redirect">msgfindall</result>
+            <result name="find">update.jsp</result>
+            <result name="update" type="redirect">msgfindall</result>
             <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>

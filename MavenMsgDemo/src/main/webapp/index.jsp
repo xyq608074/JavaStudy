@@ -21,6 +21,7 @@
         <li>
             name: <s:property value="name"/>  msgtime:<s:property value="msgtime"/> <br>
             msg:<s:property value="message"/>
+            <a href="/msgdelete?id=<s:property value="id"/>">删除</a> | <a href="/msgfind?id=<s:property value="id"/>">修改</a>
         </li>
         </s:iterator>
     </ul>

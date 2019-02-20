@@ -7,12 +7,14 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import java.util.List;
 
 public class MessageDaoImpl extends HibernateDaoSupport implements MessageDao {
+
+    /*保存方法*/
     @Override
     public void save(Msg msg) {
         System.out.println("MessageDaoImpl save");
         this.getHibernateTemplate().save(msg);
     }
-
+    /*查询所有方法*/
     @Override
     public List<Msg> findAll() {
         System.out.println("MessageDaoImpl findall");
@@ -20,6 +22,7 @@ public class MessageDaoImpl extends HibernateDaoSupport implements MessageDao {
         return msglist;
     }
 
+    //删除
     @Override
     public void delete(Msg msg) {
         System.out.println("MessageDaoImpl delete");
@@ -27,6 +30,7 @@ public class MessageDaoImpl extends HibernateDaoSupport implements MessageDao {
         this.getHibernateTemplate().delete(msg);
     }
 
+    //查询一条
     @Override
     public List<Msg> find(Msg msg) {
         System.out.println("MessageDaoImpl find");
@@ -34,6 +38,7 @@ public class MessageDaoImpl extends HibernateDaoSupport implements MessageDao {
         return msglist;
     }
 
+    //修改
     @Override
     public void update(Msg msg) {
         System.out.println("MessageDaoImpl update");

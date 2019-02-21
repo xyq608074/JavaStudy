@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.exam.domain.Class" table="class" schema="exam">
+        <id name="clsId" column="cls_id"/>
+        <property name="clsName" column="cls_name"/>
+        <property name="clsNumpeople" column="cls_numpeople"/>
+        <property name="clsAvgscore" column="cls_avgscore"/>
+        <property name="clsTotalscore" column="cls_totalscore"/>
+    </class>
+</hibernate-mapping>

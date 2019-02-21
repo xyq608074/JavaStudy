@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <package name="exam" extends="struts-default" namespace="/">
+        <!--考试系统-->
+        <action name="*exam" class="examAction" method="{1}">
+            <result name="thexam">th_login.jsp</result>
+            <result name="stuexam">stu_login.jsp</result>
+            <allowed-methods>regex:.*</allowed-methods>
+        </action>
+    </package>
+    <package name="stu" extends="struts-default" namespace="/">
+        <action name="stu*" class="stuAction" method="{1}">
+            <result name="stulogin"></result>
+            <allowed-methods>regex:.*</allowed-methods>
+        </action>
+    </package>
+    <package name="th" extends="struts-default" namespace="/">
+        <action name="th*" class="thAction" method="{1}">
+            <result name="thlogin"></result>
+            <allowed-methods>regex:.*</allowed-methods>
+        </action>
+    </package>
+</struts>

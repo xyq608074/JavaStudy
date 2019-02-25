@@ -11,6 +11,7 @@ public class Teacher {
     private String thName;
     private String thUsername;
     private String thPassword;
+    private String thClass;
 
     @Id
     @Column(name = "th_id")
@@ -52,6 +53,16 @@ public class Teacher {
         this.thPassword = thPassword;
     }
 
+    @Basic
+    @Column(name = "th_class")
+    public String getThClass() {
+        return thClass;
+    }
+
+    public void setThClass(String thClass) {
+        this.thClass = thClass;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,6 +74,7 @@ public class Teacher {
         if (thName != null ? !thName.equals(teacher.thName) : teacher.thName != null) return false;
         if (thUsername != null ? !thUsername.equals(teacher.thUsername) : teacher.thUsername != null) return false;
         if (thPassword != null ? !thPassword.equals(teacher.thPassword) : teacher.thPassword != null) return false;
+        if (thClass != null ? !thClass.equals(teacher.thClass) : teacher.thClass != null) return false;
 
         return true;
     }
@@ -73,6 +85,7 @@ public class Teacher {
         result = 31 * result + (thName != null ? thName.hashCode() : 0);
         result = 31 * result + (thUsername != null ? thUsername.hashCode() : 0);
         result = 31 * result + (thPassword != null ? thPassword.hashCode() : 0);
+        result = 31 * result + (thClass != null ? thClass.hashCode() : 0);
         return result;
     }
 
@@ -83,6 +96,7 @@ public class Teacher {
                 ", thName='" + thName + '\'' +
                 ", thUsername='" + thUsername + '\'' +
                 ", thPassword='" + thPassword + '\'' +
+                ", thClass='" + thClass + '\'' +
                 '}';
     }
 }

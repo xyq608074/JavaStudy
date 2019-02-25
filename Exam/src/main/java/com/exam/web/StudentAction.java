@@ -22,8 +22,15 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
 
     public String login(){
         System.out.println("studentAction stulogin");
-        student.setStuUsername("张三");
-        studentService.login(student);
-        return "stulogin";
+        Student stulogin = studentService.login(student);
+
+        if (stulogin!=null){
+            System.out.println("登陆成功");
+            return "logingin";
+        }else{
+            System.out.println("登陆失败");
+            this.addActionError("账号或密码错误!");
+            return "login";
+        }
     }
 }

@@ -8,20 +8,14 @@
     </bean>
 
     <!--Action-->
-    <bean id="examAction" class="com.exam.web.ExamAction">
-        <property name="examService" ref="examService"/>
-    </bean>
-    <bean id="stuAction" class="com.exam.web.StudentAction">
+    <bean id="stuAction" class="com.exam.web.StudentAction" scope="prototype">
         <property name="studentService" ref="studentService"/>
     </bean>
-    <bean id="thAction" class="com.exam.web.TeacherAction">
+    <bean id="thAction" class="com.exam.web.TeacherAction" scope="prototype">
         <property name="teacherService" ref="teacherService"/>
     </bean>
 
     <!--Service-->
-    <bean id="examService" class="com.exam.service.impl.ExamServiceImpl">
-        <property name="examDao" ref="examDao"/>
-    </bean>
     <bean id="studentService" class="com.exam.service.impl.StudentServiceImpl">
         <property name="studentDao" ref="studentDao"/>
     </bean>
@@ -30,9 +24,6 @@
     </bean>
 
     <!--Dao-->
-    <bean id="examDao" class="com.exam.dao.impl.ExamDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
     <bean id="studentDao" class="com.exam.dao.impl.StudentDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>

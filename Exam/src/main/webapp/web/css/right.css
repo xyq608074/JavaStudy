@@ -1,0 +1,94 @@
+@charset "UTF-8";
+body,header,nav,ul,li,font,p,h1,h2,h3,h4,h5,h6,footer{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{text-decoration: none;}
+li{list-style-type: none;}
+
+div.select{
+    width: 80%;
+    height: 40px;
+    margin: 30px;
+}
+div.select a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:1px solid #333;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin: 0 15px 0 0;
+    font-size: 14px;
+    color: #333;
+}
+div.select a.active{
+    color: #f1f1f1;
+    background: #333333;
+}
+form{
+    width: 300px;
+    line-height: 40px;
+    float: left;
+    margin-left: 200px;
+}
+form div.findclass{
+    color: #333;
+    font-size: 14px;
+}
+
+form div.findclass select{
+    height: 25px;
+    font-size: 14px;
+}
+form div.findclass input[type="submit"]{
+    width: 80px;
+    height: 26px;
+}
+
+table{
+    width: 90%;
+    font-size: 14px;
+    margin-left: 30px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color:#333;
+}
+table tr{
+    height: 40px;
+}
+table tr th{
+    background: #333;
+    color: #f9f9f9;
+}
+table tr td{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+table tr td.ck{
+    width: 50px;
+}
+table tr td.num{
+    width: 50px;
+}
+
+table tr td.score{
+    width: 100px;
+}
+table tr td.operate{
+    width: 200px;
+}
+table tr td.operate a{
+    color:#333;
+}
+table tr:nth-child(odd){
+    background: #eeeeee;
+}
+table tr:hover{
+    background: #ccc;
+}
+

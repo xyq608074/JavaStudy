@@ -4,11 +4,10 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.exam.domain.Class" table="class" schema="exam">
+    <class name="com.exam.domain.Clazz" table="class" schema="exam">
         <id name="clsId" column="cls_id"/>
         <property name="clsName" column="cls_name"/>
         <property name="clsNumpeople" column="cls_numpeople"/>
         <property name="clsAvgscore" column="cls_avgscore"/>
-        <property name="clsTotalscore" column="cls_totalscore"/>
     </class>
 </hibernate-mapping>

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+body,header,nav,ul,li,font,p,h1,h2,h3,h4,h5,h6,footer{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{text-decoration: none;}
+li{list-style-type: none;}
+
+body{
+    background: #333;
+}
+
+div.user{
+    margin:10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #f9f9f9;
+    line-height: 40px;
+}
+ul {
+    margin-left: 10px;
+}
+ul li{
+    margin:5px 0 0 15px;
+}
+ul li a{
+    color: #f9f9f9;
+    font-size: 14px;
+}

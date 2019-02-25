@@ -15,7 +15,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void login(Student student) {
-        studentDao.login(student);
+    public Student login(Student student) {
+
+        student.setStuUsername(student.getStuUsername());
+        student.setStuPassword(student.getStuPassword());
+
+        return studentDao.login(student);
     }
 }

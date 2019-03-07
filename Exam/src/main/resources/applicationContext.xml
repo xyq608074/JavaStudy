@@ -14,6 +14,9 @@
     <bean id="thAction" class="com.exam.web.TeacherAction" scope="prototype">
         <property name="teacherService" ref="teacherService"/>
     </bean>
+    <bean id="clsAction" class="com.exam.web.ClazzAction" scope="prototype">
+        <property name="clazzService" ref="classService"/>
+    </bean>
 
     <!--Service-->
     <bean id="studentService" class="com.exam.service.impl.StudentServiceImpl">
@@ -22,12 +25,18 @@
     <bean id="teacherService" class="com.exam.service.impl.TeacherServiceImpl">
         <property name="teacherDao" ref="teacherDao"/>
     </bean>
+    <bean id="classService" class="com.exam.service.impl.ClazzServiceImpl">
+        <property name="clazzDao" ref="clazzDao"/>
+    </bean>
 
     <!--Dao-->
     <bean id="studentDao" class="com.exam.dao.impl.StudentDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <bean id="teacherDao" class="com.exam.dao.impl.TeacherDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="clazzDao" class="com.exam.dao.impl.ClazzDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 

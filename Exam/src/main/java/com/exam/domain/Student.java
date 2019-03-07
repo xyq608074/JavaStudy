@@ -4,6 +4,7 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -88,4 +89,16 @@ public class Student {
         result = 31 * result + (stuPassword != null ? stuPassword.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "stuId=" + stuId +
+                ", stuName='" + stuName + '\'' +
+                ", stuClass=" + stuClass +
+                ", stuUsername='" + stuUsername + '\'' +
+                ", stuPassword='" + stuPassword + '\'' +
+                '}';
+    }
+
 }

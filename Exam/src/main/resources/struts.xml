@@ -7,21 +7,45 @@
 <struts>
     <constant name="struts.devMode" value="true" />
 
-    <!--老师登陆-->
+    <!--老师-->
     <package name="th" extends="struts-default" namespace="/teacher">
         <action name="*" class="thAction" method="{1}">
+            <!--登陆和登陆失败-->
             <result name="login">login.jsp</result>
+            <!--登陆成功-->
             <result name="logingin" type="redirect">index.jsp</result>
-            <result name="list">student.jsp</result>
+            <!--添加学生-->
+            <result name="addstu">/student/add.jsp</result>
             <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>
 
-    <!--学生登陆-->
+    <!--学生-->
     <package name="stu" extends="struts-default" namespace="/student">
         <action name="*" class="stuAction" method="{1}">
             <result name="login">login.jsp</result>
             <result name="logingin" type="redirect">index.jsp</result>
+            <!--获取学生列表-->
+            <result name="stulist">student.jsp</result>
+            <!--添加学生功能-->
+            <result name="addstu">/student/add.jsp</result>
+            <result name="add" type="redirectAction">../class/classlist</result>
+            <result name="adderror">/student/add.jsp</result>
+
+            <!--删除学生功能返回学生列表-->
+            <result name="delete" type="redirectAction">../class/classlist</result>
+
+            <!--修改学生-->
+            <result name="findid">/student/update.jsp</result>
+            <allowed-methods>regex:.*</allowed-methods>
+        </action>
+    </package>
+
+    <!--班级-->
+    <package name="cls" extends="struts-default" namespace="/class">
+        <action name="*" class="clsAction" method="{1}">
+            <!--班级列表-->
+            <result name="classlist">../student/student.jsp</result>
             <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>

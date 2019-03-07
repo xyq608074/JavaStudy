@@ -14,7 +14,7 @@
     <!-- 后台打印SQL -->
     <property name="hibernate.show_sql">true</property>
     <!-- 格式化SQL -->
-    <!--<property name="hibernate.format_sql">true</property>-->
+    <property name="hibernate.format_sql">true</property>
     <!-- 自动创建表 -->
     <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
 

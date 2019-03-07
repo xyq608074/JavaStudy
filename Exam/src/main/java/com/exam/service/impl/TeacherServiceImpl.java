@@ -27,7 +27,6 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public List<Clazz> classlist(String thclass) {
-//        System.out.println(teacher);
        return teacherDao.classlist(thclass);
     }
 }

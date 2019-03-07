@@ -1,11 +1,9 @@
-package com.exam.service;
+package com.exam.dao;
 
 import com.exam.domain.Clazz;
 
 import java.util.List;
 
-public interface ClazzService {
-
+public interface ClazzDao {
     List<Clazz> classList(String clazz);
-
 }

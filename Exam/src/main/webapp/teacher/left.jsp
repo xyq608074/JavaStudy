@@ -11,7 +11,7 @@
     </div>
     <hr width="80%">
     <ul>
-        <li><a href="student.jsp" target="right">学生管理</a></li>
+        <li><a href="/class/classlist" target="right">学生管理</a></li>
     </ul>
 </body>
 </html>

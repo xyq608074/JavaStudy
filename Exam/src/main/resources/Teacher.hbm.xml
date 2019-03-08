@@ -3,7 +3,6 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-
     <class name="com.exam.domain.Teacher" table="teacher" schema="exam">
         <id name="thId" column="th_id"/>
         <property name="thName" column="th_name"/>

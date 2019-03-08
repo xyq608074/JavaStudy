@@ -17,28 +17,50 @@
     <bean id="clsAction" class="com.exam.web.ClazzAction" scope="prototype">
         <property name="clazzService" ref="classService"/>
     </bean>
+    <bean id="courseAction" class="com.exam.web.CourseAcion" scope="prototype">
+        <property name="courseService" ref="courseService"/>
+    </bean>
+    
 
     <!--Service-->
+    <!--学生service-->
     <bean id="studentService" class="com.exam.service.impl.StudentServiceImpl">
         <property name="studentDao" ref="studentDao"/>
     </bean>
+    <!--老师service-->
     <bean id="teacherService" class="com.exam.service.impl.TeacherServiceImpl">
         <property name="teacherDao" ref="teacherDao"/>
     </bean>
+    <!--班级service-->
     <bean id="classService" class="com.exam.service.impl.ClazzServiceImpl">
         <property name="clazzDao" ref="clazzDao"/>
     </bean>
+    <!--学科service-->
+    <bean id="courseService" class="com.exam.service.impl.CourseServiceImpl">
+        <property name="courseDao" ref="courseDao"/>
+    </bean>
+
+
+
 
     <!--Dao-->
+    <!--学生dao-->
     <bean id="studentDao" class="com.exam.dao.impl.StudentDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <!--老师dao-->
     <bean id="teacherDao" class="com.exam.dao.impl.TeacherDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <!--班级dao-->
     <bean id="clazzDao" class="com.exam.dao.impl.ClazzDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <!--学科dao-->
+    <bean id="courseDao" class="com.exam.dao.impl.CourseDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
 
     <!--tx-->
     <bean id="tx" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

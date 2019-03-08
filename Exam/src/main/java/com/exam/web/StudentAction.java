@@ -62,7 +62,6 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
     }
 
 
-
     //学生列表 根据班级
     public String stulist(){
         Parameter stuclass = ActionContext.getContext().getParameters().get("thClass");
@@ -71,11 +70,9 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
             return "stulist";
         }
         List<Student> studentlistclass = studentService.findAllByClass(stuclass);
-        System.out.println("studentlistclass->"+studentlistclass);
         ActionContext.getContext().put("studentlistclass",studentlistclass);
 
         Teacher thlogin = (Teacher) ActionContext.getContext().getSession().get("thlogin");
-        System.out.println("thlogin=>"+thlogin);
 
         ClazzAction.getclazz();
         return "stulist";
@@ -89,6 +86,7 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
         return "findid";
     }
 
+    //修改
     public String update(){
         studentService.update(student);
         ClazzAction.getclazz();

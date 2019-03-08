@@ -50,6 +50,31 @@
         </action>
     </package>
 
+    <!--学科-->
+    <package name="course" extends="struts-default" namespace="/course">
+        <action name="*" class="courseAction" method="{1}">
+            <!--查询-->
+            <result name="courselist">/course/index.jsp</result>
+
+            <!--添加-->
+            <!--添加成功-->
+            <result name="add" type="redirectAction">courselist</result>
+            <!--添加失败-->
+            <result name="adderror">/course/add.jsp</result>
+
+            <!--查询一条 修改用-->
+            <result name="findid">/course/update.jsp</result>
+            <!--修改跳转-->
+            <result name="update" type="redirectAction">courselist</result>
+
+            <!--删除-->
+            <result name="delete" type="redirectAction">courselist</result>
+
+
+            <allowed-methods>regex:.*</allowed-methods>
+        </action>
+    </package>
+
 
 
 </struts>

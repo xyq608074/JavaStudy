@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.exam.domain.Questions" table="questions" schema="exam">
+        <id name="qsId" column="qs_id"/>
+        <property name="qsTitle" column="qs_title"/>
+        <property name="qsA" column="qs_a"/>
+        <property name="qsB" column="qs_b"/>
+        <property name="qsC" column="qs_c"/>
+        <property name="qsD" column="qs_d"/>
+        <property name="qsAnswer" column="qs_answer"/>
+        <property name="qsCourse" column="qs_course"/>
+    </class>
+</hibernate-mapping>

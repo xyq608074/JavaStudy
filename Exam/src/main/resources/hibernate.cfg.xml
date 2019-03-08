@@ -6,8 +6,8 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost:3306/exam?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=GMT&amp;allowPublicKeyRetrieval=true</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-      <property name="hibernate.connection.username">root</property>
-      <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
 
 
     <!-- 可选配置================== -->
@@ -38,6 +38,10 @@
     <mapping class="com.exam.domain.Student"/>
     <mapping resource="Teacher.hbm.xml"/>
     <mapping class="com.exam.domain.Teacher"/>
+    <mapping resource="Questions.hbm.xml"/>
+    <mapping class="com.exam.domain.Questions"/>
+    <mapping resource="Course.hbm.xml"/>
+    <mapping class="com.exam.domain.Course"/>
 
   </session-factory>
 </hibernate-configuration>

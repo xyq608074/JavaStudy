@@ -12,6 +12,7 @@
     <hr width="80%">
     <ul>
         <li><a href="/class/classlist" target="right">学生管理</a></li>
+        <li><a href="/course/courselist" target="right">学科管理</a></li>
     </ul>
 </body>
 </html>

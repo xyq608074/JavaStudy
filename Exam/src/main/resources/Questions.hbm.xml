@@ -5,7 +5,9 @@
 <hibernate-mapping>
 
     <class name="com.exam.domain.Questions" table="questions" schema="exam">
-        <id name="qsId" column="qs_id"/>
+        <id name="qsId" column="qs_id">
+            <generator class="native"/>
+        </id>
         <property name="qsTitle" column="qs_title"/>
         <property name="qsA" column="qs_a"/>
         <property name="qsB" column="qs_b"/>

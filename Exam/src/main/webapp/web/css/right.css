@@ -65,6 +65,7 @@ table{
     border: 1px solid #ccc;
     border-radius: 3px;
     color:#333;
+    table-layout: fixed;
 }
 table tr{
     height: 40px;
@@ -75,20 +76,23 @@ table tr th{
 }
 table tr td{
     text-align: center;
-    border-bottom: 1px solid #ccc;
+    /*border-bottom: 1px solid #ccc;*/
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
-table tr td.ck{
+table tr th.ck{
     width: 50px;
 }
-table tr td.num{
+table tr th.num{
     width: 50px;
 }
 
 table tr td.score{
     width: 100px;
 }
-table tr td.operate{
-    width: 200px;
+table tr th.operate{
+    width: 100px;
 }
 table tr td.operate a{
     color:#333;

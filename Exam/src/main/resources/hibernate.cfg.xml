@@ -34,12 +34,16 @@
 
     <mapping resource="Clazz.hbm.xml"/>
     <mapping class="com.exam.domain.Clazz"/>
+
     <mapping resource="Student.hbm.xml"/>
     <mapping class="com.exam.domain.Student"/>
+
     <mapping resource="Teacher.hbm.xml"/>
     <mapping class="com.exam.domain.Teacher"/>
+
     <mapping resource="Questions.hbm.xml"/>
     <mapping class="com.exam.domain.Questions"/>
+
     <mapping resource="Course.hbm.xml"/>
     <mapping class="com.exam.domain.Course"/>
 

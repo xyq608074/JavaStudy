@@ -70,11 +70,35 @@
             <!--删除-->
             <result name="delete" type="redirectAction">courselist</result>
 
-
+            <!--显示考题的下拉列表-->
+            <result name="qslist">../questions/index.jsp</result>
             <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>
 
+    <!--考题-->
+    <package name="questions" extends="struts-default" namespace="/qs">
+        <action name="*" class="qsAction" method="{1}">
+            <!--查询-->
+            <result name="qsselect">/questions/index.jsp</result>
 
+            <!--加载添加考题-->
+            <result name="addui">/questions/add.jsp</result>
+            <!--添加-->
+            <result name="add" type="redirectAction">../course/cslist</result>
+            <result name="adderror" type="redirectAction">addui</result>
+
+            <!--删除-->
+            <result name="delete" type="redirectAction">../course/cslist</result>
+
+            <!--查询一条-->
+            <result name="findid">/questions/update.jsp</result>
+
+            <!--update-->
+            <result name="update" type="redirectAction">select</result>
+            <allowed-methods>regex:.*</allowed-methods>
+
+        </action>
+    </package>
 
 </struts>

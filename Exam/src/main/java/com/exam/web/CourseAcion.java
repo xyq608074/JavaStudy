@@ -5,7 +5,6 @@ import com.exam.service.CourseService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import org.apache.struts2.dispatcher.Parameter;
 
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class CourseAcion extends ActionSupport implements ModelDriven<Course> {
         return course;
     }
 
-    private CourseService courseService;
+    private static CourseService courseService;
 
     public void setCourseService(CourseService courseService) {
         this.courseService = courseService;
@@ -25,9 +24,14 @@ public class CourseAcion extends ActionSupport implements ModelDriven<Course> {
 
     //查询所有课程
     public String courselist(){
-        List<Course> courseList = courseService.select();
-        ActionContext.getContext().put("courselist",courseList);
+        this.getcourse();
         return "courselist";
+    }
+
+    //获得所有课程
+    public static void getcourse(){
+        List<Course> getcourse = courseService.select();
+        ActionContext.getContext().put("getcourse",getcourse);
     }
 
     //添加学科
@@ -57,5 +61,11 @@ public class CourseAcion extends ActionSupport implements ModelDriven<Course> {
     public String delete(){
         courseService.delete(course);
         return "delete";
+    }
+
+    //使用在下拉列表
+    public String cslist(){
+        this.getcourse();
+        return "qslist";
     }
 }

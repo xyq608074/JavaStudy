@@ -26,7 +26,6 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
 
 
     public String login(){
-        System.out.println("studentAction stulogin");
         Student stulogin = studentService.login(student);
 
         if (stulogin!=null){

@@ -13,14 +13,14 @@
 
 <table>
     <tr>
-        <th></th>
-        <th>序号</th>
+        <th class="ck"></th>
+        <th class="num">序号</th>
         <th>课程名称</th>
         <th>课程信息</th>
         <th>操作</th>
     </tr>
-    <s:if test="courselist">
-        <s:iterator value="courselist">
+    <s:if test="getcourse">
+        <s:iterator value="getcourse">
             <tr>
                 <td class="ck">
                     <input type="checkbox" name="ck" value="<s:property value="courseId"/>">

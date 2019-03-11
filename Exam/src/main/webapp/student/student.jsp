@@ -22,8 +22,8 @@
 
     <table>
         <tr>
-            <th></th>
-            <th>序号</th>
+            <th class="ck"></th>
+            <th class="num">序号</th>
             <th>姓名</th>
             <th>成绩</th>
             <th>操作</th>

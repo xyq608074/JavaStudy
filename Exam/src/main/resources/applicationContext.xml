@@ -8,17 +8,25 @@
     </bean>
 
     <!--Action-->
+    <!--学生-->
     <bean id="stuAction" class="com.exam.web.StudentAction" scope="prototype">
         <property name="studentService" ref="studentService"/>
     </bean>
+    <!--老师-->
     <bean id="thAction" class="com.exam.web.TeacherAction" scope="prototype">
         <property name="teacherService" ref="teacherService"/>
     </bean>
+    <!--班级-->
     <bean id="clsAction" class="com.exam.web.ClazzAction" scope="prototype">
         <property name="clazzService" ref="classService"/>
     </bean>
+    <!--学科-->
     <bean id="courseAction" class="com.exam.web.CourseAcion" scope="prototype">
         <property name="courseService" ref="courseService"/>
+    </bean>
+    <!--考题-->
+    <bean id="qsAction" class="com.exam.web.QuestionsAction" scope="prototype">
+        <property name="questionsService" ref="qsService"/>
     </bean>
     
 
@@ -39,7 +47,10 @@
     <bean id="courseService" class="com.exam.service.impl.CourseServiceImpl">
         <property name="courseDao" ref="courseDao"/>
     </bean>
-
+    <!--考题service-->
+    <bean id="qsService" class="com.exam.service.impl.QuestionServiceImpl">
+        <property name="questionDao" ref="qsDao"/>
+    </bean>
 
 
 
@@ -58,6 +69,10 @@
     </bean>
     <!--学科dao-->
     <bean id="courseDao" class="com.exam.dao.impl.CourseDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--考题dao-->
+    <bean id="qsDao" class="com.exam.dao.impl.QuestionDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 

@@ -29,13 +29,13 @@
             <th>操作</th>
         </tr>
         <s:if test="studentlistclass">
-            <s:iterator value="studentlistclass">
+            <s:iterator value="studentlistclass" status="clsstulist">
                 <tr>
                     <td class="ck">
                         <input type="checkbox" name="ck" <s:property value="stuId"/>>
                     </td>
                     <td class="num">
-                        <s:property value="stuId"/>
+                        <s:property value="#clsstulist.index+1"/>
                     </td>
                     <td class="name">
                         <s:property value="stuName"/>

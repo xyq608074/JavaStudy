@@ -5,7 +5,6 @@ import com.exam.service.QuestionsService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import org.apache.struts2.components.ActionError;
 
 import java.util.List;
 
@@ -23,11 +22,11 @@ public class QuestionsAction extends ActionSupport implements ModelDriven<Questi
         this.questionsService = questionsService;
     }
 
+    //查询
     public String select(){
         CourseAcion.getcourse();
         String qscourse = ActionContext.getContext().getParameters().get("qsCourse").getValue();
         List<Questions> qslist = questionsService.select(qscourse);
-        System.out.println("select ---->"+qslist);
         ActionContext.getContext().put("qslist",qslist);
         return "qsselect";
     }

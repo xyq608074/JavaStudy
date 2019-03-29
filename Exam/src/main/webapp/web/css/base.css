@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body,header,nav,ul,li,font,p,h1,h2,h3,h4,h5,h6,footer{
+body,header,nav,ul,li,font,p,h1,h2,h3,h4,h5,h6,footer,button,fieldset{
     margin: 0px;
     padding: 0px;
 }

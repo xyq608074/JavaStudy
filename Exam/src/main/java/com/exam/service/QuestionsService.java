@@ -1,6 +1,8 @@
 package com.exam.service;
 
+import com.exam.domain.PageBean;
 import com.exam.domain.Questions;
+import org.hibernate.criterion.DetachedCriteria;
 
 import java.util.List;
 
@@ -15,4 +17,8 @@ public interface QuestionsService {
     Questions findid(Questions questions);
 
     void update(Questions questions);
+
+    PageBean<Questions> randselect(DetachedCriteria detachedCriteria, Integer currentPage, Integer pageSize);
+
+    void rightorwrong(Questions questions);
 }

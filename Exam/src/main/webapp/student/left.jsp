@@ -7,13 +7,12 @@
 </head>
 <body>
     <div class="user">
-        欢迎: <s:property value="#session.thlogin.thName"/> 教师登录
+        欢迎: <s:property value="#session.stulogin.stuName"/> 同学登录
     </div>
     <hr width="80%">
     <ul>
-        <li><a href="/class/classlist" target="right">学生管理</a></li>
-        <li><a href="/course/courselist" target="right">学科管理</a></li>
-        <li><a href="/course/cslist" target="right">试题管理</a></li>
+        <li><a href="/qs/examing" target="right">开始考试</a></li>
+        <li><a href="#" target="right">考试成绩</a></li>
     </ul>
 </body>
 </html>

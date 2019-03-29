@@ -1,14 +1,16 @@
 package com.exam.service.impl;
 
 import com.exam.dao.QuestionDao;
+import com.exam.domain.PageBean;
 import com.exam.domain.Questions;
 import com.exam.service.QuestionsService;
+import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Transactional
-public class QuestionServiceImpl implements QuestionsService {
+public class QuestionsServiceImpl implements QuestionsService {
 
     private QuestionDao questionDao;
 
@@ -54,5 +56,28 @@ public class QuestionServiceImpl implements QuestionsService {
     @Override
     public void update(Questions questions) {
         questionDao.update(questions);
+    }
+
+    @Override
+    public PageBean<Questions> randselect(DetachedCriteria detachedCriteria, Integer currentPage, Integer pageSize) {
+        PageBean<Questions> pageBean= new PageBean<Questions>();
+
+        //封装当前的页数
+        pageBean.setCurrentPage(currentPage);
+        //封装每页记录数
+        pageBean.setPageSize(pageSize);
+        //封装总记录数
+        Integer rscount=questionDao.randselectcount(detachedCriteria);
+        pageBean.setTotal(rscount);
+        //封装总页数
+        pageBean.setTotalPage((int) Math.ceil(rscount/pageSize));
+        //封装每页显示的数据集合
+        Integer begin=(currentPage-1)*pageSize;
+
+
+        List<Questions> randselect = questionDao.randselect(detachedCriteria, begin, pageSize);
+        pageBean.setList(randselect);
+
+        return pageBean;
     }
 }

@@ -1,7 +1,10 @@
 package com.exam.dao.impl;
 
 import com.exam.dao.QuestionDao;
+import com.exam.domain.PageBean;
 import com.exam.domain.Questions;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Projections;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.io.Serializable;
@@ -10,7 +13,8 @@ import java.util.List;
 public class QuestionDaoImpl extends HibernateDaoSupport implements QuestionDao {
     @Override
     public List<Questions> select(String questions) {
-        List<Questions> qslist = (List<Questions>) this.getHibernateTemplate().find("from Questions where qsCourse="+questions);
+        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Questions.class);
+        List<Questions> qslist = (List<Questions>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
         return qslist;
     }
 
@@ -47,5 +51,28 @@ public class QuestionDaoImpl extends HibernateDaoSupport implements QuestionDao 
         qs.setQsCourse(questions.getQsCourse());
 
         this.getHibernateTemplate().update(qs);
+    }
+
+//    @Override
+//    public PageBean<Questions> randselect(Questions questions, Integer currentPage) {
+//        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Questions.class);
+////        detachedCriteria.add(Restrictions.sqlRestriction("qs_course=1 order by rand()"));
+//        PageBean<Questions> examlist = (PageBean<Questions>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
+//        return examlist;
+//    }
+
+    @Override
+    public Integer randselectcount(DetachedCriteria detachedCriteria) {
+        detachedCriteria.setProjection(Projections.rowCount());
+        List<Long> count = (List<Long>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
+        return count.get(0).intValue();
+    }
+
+    @Override
+    public List<Questions> randselect(DetachedCriteria detachedCriteria, Integer begin, Integer pageSize) {
+        detachedCriteria.setProjection(null);
+//        detachedCriteria.add(Restrictions.sqlRestriction("qs_course=1 order by rand()"));
+        List<Questions> examlist = (List<Questions>) this.getHibernateTemplate().findByCriteria(detachedCriteria,begin,pageSize );
+        return examlist;
     }
 }

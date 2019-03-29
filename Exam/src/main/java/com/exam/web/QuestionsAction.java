@@ -1,10 +1,12 @@
 package com.exam.web;
 
+import com.exam.domain.PageBean;
 import com.exam.domain.Questions;
 import com.exam.service.QuestionsService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import org.hibernate.criterion.DetachedCriteria;
 
 import java.util.List;
 
@@ -65,5 +67,41 @@ public class QuestionsAction extends ActionSupport implements ModelDriven<Questi
     public String update(){
         questionsService.update(questions);
         return "update";
+    }
+
+
+    //分页查询获得当前页数
+    private Integer currentPage=1;
+
+    public void setCurrentPage(Integer currentPage) {
+        if (currentPage==null){
+            currentPage=1;
+        }
+        this.currentPage = currentPage;
+    }
+
+    //分页查询获得每页多少条
+    private Integer pageSize=1;
+
+    public void setPageSize(Integer pageSize) {
+        if (pageSize==null){
+            pageSize=1;
+        }
+        this.pageSize = pageSize;
+    }
+
+    public String examing(){
+        DetachedCriteria detachedCriteria=DetachedCriteria.forClass(Questions.class);
+        PageBean<Questions> randselect = questionsService.randselect(detachedCriteria,currentPage,pageSize);
+        ActionContext.getContext().getValueStack().push(randselect);
+        return "examing";
+    }
+
+    public String rightorwrong(){
+        System.out.println("对错");
+//        System.out.println(questions.getQsAnswer());
+        questions.setQsAnswer(questions.getQsAnswer());
+        questionsService.rightorwrong(questions);
+        return NONE;
     }
 }

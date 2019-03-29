@@ -96,8 +96,12 @@
 
             <!--update-->
             <result name="update" type="redirectAction">select</result>
-            <allowed-methods>regex:.*</allowed-methods>
 
+
+
+            <!--出题 随机乱序产生相应的题-->
+            <result name="examing">/questions/examing.jsp</result>
+            <allowed-methods>regex:.*</allowed-methods>
         </action>
     </package>
 

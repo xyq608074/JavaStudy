@@ -11,19 +11,19 @@ import java.io.InputStream;
 import java.util.List;
 
 public class MyBatisTest {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         InputStream ins = Resources.getResourceAsStream("DBConfig.xml");
-        SqlSessionFactoryBuilder ssfb=new SqlSessionFactoryBuilder();
-        SqlSessionFactory ssf=ssfb.build(ins);
+        SqlSessionFactoryBuilder ssfb = new SqlSessionFactoryBuilder();
+        SqlSessionFactory ssf = ssfb.build(ins);
 
         //使用工厂产生session对象
-        SqlSession session=ssf.openSession();
+        SqlSession session = ssf.openSession();
 
-        IStudentDao iStudentDao=session.getMapper(IStudentDao.class);
+        IStudentDao iStudentDao = session.getMapper(IStudentDao.class);
 
         List<Student> findall = iStudentDao.findAll();
 
-        for (Student stu: findall){
+        for (Student stu : findall) {
             System.out.println(stu);
         }
         session.close();

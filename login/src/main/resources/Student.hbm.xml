@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="login.domain.Student" table="student">
+        <id name="stuId" column="stu_id"/>
+        <property name="stuName" column="stu_name"/>
+        <property name="stuClass" column="stu_class"/>
+        <property name="stuUsername" column="stu_username"/>
+        <property name="stuPassword" column="stu_password"/>
+    </class>
+</hibernate-mapping>

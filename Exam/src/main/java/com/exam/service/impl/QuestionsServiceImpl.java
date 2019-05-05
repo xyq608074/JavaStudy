@@ -1,6 +1,6 @@
 package com.exam.service.impl;
 
-import com.exam.dao.QuestionDao;
+import com.exam.dao.QuestionsDao;
 import com.exam.domain.PageBean;
 import com.exam.domain.Questions;
 import com.exam.service.QuestionsService;
@@ -12,16 +12,16 @@ import java.util.List;
 @Transactional
 public class QuestionsServiceImpl implements QuestionsService {
 
-    private QuestionDao questionDao;
+    private QuestionsDao questionsDao;
 
-    public void setQuestionDao(QuestionDao questionDao) {
-        this.questionDao = questionDao;
+    public void setQuestionsDao(QuestionsDao questionDao) {
+        this.questionsDao = questionDao;
     }
 
 
     @Override
     public List<Questions> select(String questions) {
-        return questionDao.select(questions);
+        return questionsDao.select(questions);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class QuestionsServiceImpl implements QuestionsService {
         questions.setQsAnswer(questions.getQsAnswer());
         questions.setQsCourse(questions.getQsCourse());
 
-        Integer add = questionDao.add(questions);
+        Integer add = questionsDao.add(questions);
         return add;
     }
 
@@ -42,20 +42,20 @@ public class QuestionsServiceImpl implements QuestionsService {
     @Override
     public void delete(Questions questions) {
         questions.setQsId(questions.getQsId());
-        questionDao.delete(questions);
+        questionsDao.delete(questions);
     }
 
     //查询一条
     @Override
     public Questions findid(Questions questions) {
         questions.setQsId(questions.getQsId());
-        return questionDao.findid(questions);
+        return questionsDao.findid(questions);
     }
 
     //修改
     @Override
     public void update(Questions questions) {
-        questionDao.update(questions);
+        questionsDao.update(questions);
     }
 
     @Override
@@ -67,7 +67,7 @@ public class QuestionsServiceImpl implements QuestionsService {
         //封装每页记录数
         pageBean.setPageSize(pageSize);
         //封装总记录数
-        Integer rscount=questionDao.randselectcount(detachedCriteria);
+        Integer rscount=questionsDao.randselectcount(detachedCriteria);
         pageBean.setTotal(rscount);
         //封装总页数
         pageBean.setTotalPage((int) Math.ceil(rscount/pageSize));
@@ -75,9 +75,14 @@ public class QuestionsServiceImpl implements QuestionsService {
         Integer begin=(currentPage-1)*pageSize;
 
 
-        List<Questions> randselect = questionDao.randselect(detachedCriteria, begin, pageSize);
+        List<Questions> randselect = questionsDao.randselect(detachedCriteria, begin, pageSize);
         pageBean.setList(randselect);
 
         return pageBean;
+    }
+
+    @Override
+    public int rightorwrong(Questions questions) {
+        return questionsDao.righttowrong(questions);
     }
 }

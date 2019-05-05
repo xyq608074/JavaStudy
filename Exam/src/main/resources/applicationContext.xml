@@ -48,8 +48,8 @@
         <property name="courseDao" ref="courseDao"/>
     </bean>
     <!--考题service-->
-    <bean id="qsService" class="com.exam.service.impl.QuestionServiceImpl">
-        <property name="questionDao" ref="qsDao"/>
+    <bean id="qsService" class="com.exam.service.impl.QuestionsServiceImpl">
+        <property name="questionsDao" ref="qsDao"/>
     </bean>
 
 
@@ -72,7 +72,7 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <!--考题dao-->
-    <bean id="qsDao" class="com.exam.dao.impl.QuestionDaoImpl">
+    <bean id="qsDao" class="com.exam.dao.impl.QuestionsDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 

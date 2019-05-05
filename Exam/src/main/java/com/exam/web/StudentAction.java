@@ -30,6 +30,7 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
 
         if (stulogin!=null){
             ActionContext.getContext().getSession().put("stulogin",stulogin);
+            ActionContext.getContext().getSession().put("qscount",0);
             return "logingin";
         }else{
             this.addActionError("账号或密码错误!");

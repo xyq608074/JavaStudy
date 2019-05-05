@@ -20,5 +20,5 @@ public interface QuestionsService {
 
     PageBean<Questions> randselect(DetachedCriteria detachedCriteria, Integer currentPage, Integer pageSize);
 
-    void rightorwrong(Questions questions);
+    int rightorwrong(Questions questions);
 }

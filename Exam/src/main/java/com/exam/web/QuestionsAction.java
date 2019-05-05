@@ -98,10 +98,20 @@ public class QuestionsAction extends ActionSupport implements ModelDriven<Questi
     }
 
     public String rightorwrong(){
-        System.out.println("对错");
-//        System.out.println(questions.getQsAnswer());
-        questions.setQsAnswer(questions.getQsAnswer());
-        questionsService.rightorwrong(questions);
-        return NONE;
+
+        questions.setQsId(questions.getQsId());
+
+        int rightorwrong = questionsService.rightorwrong(questions);
+
+        if (rightorwrong>0) {
+            int qscount = (int) ActionContext.getContext().getSession().get("qscount");
+
+            qscount += rightorwrong;
+            ActionContext.getContext().getSession().put("qscount", qscount);
+
+            System.out.println("id-" + questions.getQsId());
+            return "ok";
+        }
+        return "no";
     }
 }

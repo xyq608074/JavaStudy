@@ -49,7 +49,7 @@ public class MybatisBase {
         }
     }
 
-    @Test
+    @Test  //保存
     public void saveStu(){
         Student stu=new Student();
         stu.setName("姓名");
@@ -57,6 +57,42 @@ public class MybatisBase {
         stu.setAddr("在银河系中");
 
         studao.saveStu(stu);
+    }
+
+    @Test  //修改
+    public void updateStu(){
+        Student stu=new Student();
+        stu.setId(5);
+        stu.setName("银河222");
+        stu.setAge(23);
+        stu.setAddr("321");
+
+        studao.updateStu(stu);
+    }
+
+    @Test //删除
+    public void deleteStu(){
+        studao.deleteStu(14);
+    }
+
+    @Test //查找一条
+    public void findById(){
+        Student stu=studao.selectById(13);
+        System.out.println(stu);
+    }
+
+    @Test //模糊查询
+    public void fuzzySelect(){
+        List<Student> stus = studao.fuzzySelect("%银%");
+        for (Student stu:stus){
+            System.out.println(stu);
+        }
+    }
+
+    @Test //查询总条数
+    public void findTotal(){
+        int total = studao.findTotal();
+        System.out.println(total);
     }
 
 }

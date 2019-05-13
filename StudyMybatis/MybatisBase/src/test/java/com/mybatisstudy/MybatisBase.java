@@ -52,10 +52,9 @@ public class MybatisBase {
     @Test  //保存
     public void saveStu(){
         Student stu=new Student();
-        stu.setName("姓名");
-        stu.setAge(19);
-        stu.setAddr("在银河系中");
-
+        stu.setName("姓名1");
+        stu.setAge(91);
+        stu.setAddr("在银河系中11");
         studao.saveStu(stu);
     }
 

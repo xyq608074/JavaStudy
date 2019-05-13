@@ -37,14 +37,4 @@ public class Student {
     public void setAddr(String addr) {
         this.addr = addr;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", addr='" + addr + '\'' +
-                '}';
-    }
 }

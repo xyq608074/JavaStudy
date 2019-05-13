@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f7f70ba-34c7-4d42-bbd7-149643ddb6e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/mybatisimpl/dao/IStudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/mybatisimpl/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/mybatisimpl/domain/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/src/main/resources/DBConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatisimpl/src/test/java/com/mybatisimpl/Mybatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MavenExample/src/main/webapp/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SSHbase/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringExample/src/spring-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f7f70ba-34c7-4d42-bbd7-149643ddb6e8" name="Default Changelist" comment="实现类实现mybatis">
+      <change beforePath="$PROJECT_DIR$/../../SSHbase/web/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybatisstudy/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybatisstudy/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybatisstudy/MybatisBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mybatisstudy/MybatisBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StudyMybatis.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/mybatis/dao/IStudentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/mybatis/domain/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/DBConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/mybatis/dao/IStudentDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/com/mybatis/test/MyBatisTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,14 +63,14 @@
           <entry key="cell" value="23" />
           <entry key="dummy" value="3" />
           <entry key="java" value="4262" />
-          <entry key="txt" value="29" />
+          <entry key="txt" value="49" />
           <entry key="xml" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4262" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="PLAIN_TEXT" value="52" />
           <entry key="Scratch" value="23" />
           <entry key="XML" value="121" />
         </counts>
@@ -105,7 +78,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="36" />
+          <entry key="java" value="37" />
           <entry key="sql" value="2" />
           <entry key="stu_student" value="6" />
           <entry key="xml" value="11" />
@@ -115,7 +88,7 @@
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Database Element" value="6" />
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="37" />
           <entry key="Scratch" value="2" />
           <entry key="XML" value="11" />
         </counts>
@@ -124,15 +97,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mybatisimpl/src/test/java/com/mybatisimpl/Mybatis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="256">
+              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
                 <element signature="e#1466#1467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudent.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mybatisstudy.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mybatisstudy/MybatisBase.java" />
         <option value="$PROJECT_DIR$/../mybatisimpl/pom.xml" />
         <option value="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/domain/Student.java" />
@@ -198,6 +182,7 @@
         <option value="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/mybatisimpl/dao/IStudentDao.java" />
         <option value="$PROJECT_DIR$/../mybatisimpl/src/main/java/com/mybatisimpl/dao/impl/StudentDaoImpl.java" />
         <option value="$PROJECT_DIR$/../mybatisimpl/src/test/java/com/mybatisimpl/Mybatis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java" />
       </list>
     </option>
   </component>
@@ -270,20 +255,7 @@
               <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="MybatisBase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MybatisBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MybatisBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -291,58 +263,19 @@
               <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="MybatisBase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="mybatisstudy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
+              <item name="MybatisBase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MybatisBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisimpl" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatisstudy" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -357,7 +290,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557740073699" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557740539345" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -493,7 +426,7 @@
       <workItem from="1557132973385" duration="3837000" />
       <workItem from="1557189493970" duration="24574000" />
       <workItem from="1557534179304" duration="2027000" />
-      <workItem from="1557715988789" duration="4270000" />
+      <workItem from="1557715988789" duration="4867000" />
     </task>
     <task id="LOCAL-00001" summary="mybatisStudy">
       <created>1557135406181</created>
@@ -516,7 +449,35 @@
       <option name="project" value="LOCAL" />
       <updated>1557276698682</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="基础实现mybatis">
+      <created>1557740002277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557740002277</updated>
+    </task>
+    <task id="LOCAL-00005" summary="实现类实现mybatis">
+      <created>1557740043899</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557740043899</updated>
+    </task>
+    <task id="LOCAL-00006" summary="实现类实现mybatis">
+      <created>1557740089149</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557740089149</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".">
+      <created>1557740129502</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557740129502</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -552,7 +513,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38048000" />
+    <option name="totallyTimeSpent" value="38645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,7 +528,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.25340393" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -637,7 +598,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mybatisStudy" />
-    <option name="LAST_COMMIT_MESSAGE" value="mybatisStudy" />
+    <MESSAGE value="基础实现mybatis" />
+    <MESSAGE value="实现类实现mybatis" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2312dc35-7f10-4a2a-b7c3-56911683dde8/console.sql">
@@ -696,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mybatisstudy/MybatisBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -741,12 +698,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mybatisimpl/src/test/java/com/mybatisimpl/Mybatis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="256">
+          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1430#1431#0" expanded="true" />
             <element signature="e#1466#1467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mybatisstudy/dao/IStudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

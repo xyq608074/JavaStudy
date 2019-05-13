@@ -2,7 +2,6 @@ package com.mybatisstudy.dao;
 
 import com.mybatisstudy.domain.Student;
 import org.apache.ibatis.annotations.*;
-
 import java.util.List;
 
 public interface IStudentDao {

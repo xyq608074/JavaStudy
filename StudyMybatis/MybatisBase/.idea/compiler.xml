@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MybatisBase" />
         <module name="MybatisImpl" />
+        <module name="One2Many" />
       </profile>
     </annotationProcessing>
   </component>

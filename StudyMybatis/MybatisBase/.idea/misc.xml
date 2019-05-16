@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../mybatisimpl/pom.xml" />
+        <option value="$PROJECT_DIR$/../One2Many/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,6 +1,7 @@
 package com.mybatis.one2many.dao;
 
 import com.mybatis.one2many.domain.Account;
+import com.mybatis.one2many.domain.User;
 import org.apache.ibatis.annotations.One;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
@@ -20,7 +21,17 @@ public interface IAccountDao {
             @Result(id = true,column="accid",property = "accid"),
             @Result(column = "accuid" ,property = "accuid"),
             @Result(column = "accmoney",property = "accmoney"),
-            @Result(property = "user",column = "accuid",one = @One(select = "com.mybatis.one2many.dao.IUserDao.findById",fetchType = FetchType.EAGER))
+            @Result(property = "user",column = "accuid",
+                    one = @One(select = "com.mybatis.one2many.dao.IUserDao.findById",
+                            fetchType = FetchType.EAGER))
     })
     List<Account> findAll();
+
+
+    /**
+     * 通过uid查询账号
+     * @param userid
+     */
+    @Select("select * from account where accuid=#{userid}")
+    Account findByUid(Integer userid);
 }

@@ -3,9 +3,11 @@ package com.mybatis.one2many.domain;
 import java.io.Serializable;
 
 public class Account implements Serializable {
-    private int accid;
-    private int accuid;
+    private Integer accid;
+    private Integer accuid;
     private double accmoney;
+
+    //多对一映射(mybaits称之为一对一)
     private User user;
 
     public User getUser() {

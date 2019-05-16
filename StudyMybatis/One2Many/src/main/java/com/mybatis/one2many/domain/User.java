@@ -1,13 +1,25 @@
 package com.mybatis.one2many.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class User implements Serializable {
-    private int userid;
+    private Integer userid;
     private String username;
     private String useraddr;
     private String usersex;
     private String userbirthday;
+
+    //一对多关系映射 一个用户对应多个账户
+    private List<Account> acc;
+
+    public List<Account> getAcc() {
+        return acc;
+    }
+
+    public void setAcc(List<Account> acc) {
+        this.acc = acc;
+    }
 
     public int getUserid() {
         return userid;

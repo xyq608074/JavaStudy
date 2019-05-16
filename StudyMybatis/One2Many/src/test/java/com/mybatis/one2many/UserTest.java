@@ -1,7 +1,7 @@
 package com.mybatis.one2many;
 
-import com.mybatis.one2many.dao.IAccountDao;
-import com.mybatis.one2many.domain.Account;
+import com.mybatis.one2many.dao.IUserDao;
+import com.mybatis.one2many.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,10 +13,10 @@ import org.junit.Test;
 import java.io.InputStream;
 import java.util.List;
 
-public class AccountTest {
+public class UserTest {
     private InputStream ins;
     private SqlSession ss;
-    private IAccountDao acc;
+    private IUserDao user;
 
     @Before
     public void init() throws Exception{
@@ -27,7 +27,7 @@ public class AccountTest {
         //获取session对象
         ss = ssf.openSession(true);
         //获取代理对象
-        acc = ss.getMapper(IAccountDao.class);
+        user = ss.getMapper(IUserDao.class);
     }
     @After
     public void destory() throws Exception{
@@ -39,11 +39,11 @@ public class AccountTest {
      * 测试查询所有
      */
     @Test
-    public void findAccAll(){
-        List<Account> accs=acc.findAll();
-        for (Account acc:accs){
-            System.out.println(acc);
-            System.out.println(acc.getUser());
+    public void findUserAll(){
+        List<User> users = user.findAll();
+        for (User u:users){
+            System.out.println(u);
+            System.out.println(u.getAcc());
         }
     }
 }

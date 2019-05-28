@@ -9,7 +9,14 @@
         <module name="MybatisBase" />
         <module name="MybatisImpl" />
         <module name="One2Many" />
+        <module name="SpringMVC" />
+        <module name="SpringMVCResponse" />
+        <module name="SpringTest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringMVCResponse" target="1.7" />
+      <module name="SpringMVCTest" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

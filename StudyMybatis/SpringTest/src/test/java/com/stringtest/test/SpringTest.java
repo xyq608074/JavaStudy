@@ -19,7 +19,6 @@ public class SpringTest {
     public void testFindAll(){
         //执行方法
         List<Account> allAccount = ias.findAllAccount();
-
         for (Account acc:allAccount){
             System.out.println(acc);
         }
@@ -53,4 +52,8 @@ public class SpringTest {
         ias.deleteAccount(4);
     }
 
+    @Test  //转账
+    public void testTransfer(){
+        ias.transfer("张三丰","李四",500f);
+    }
 }

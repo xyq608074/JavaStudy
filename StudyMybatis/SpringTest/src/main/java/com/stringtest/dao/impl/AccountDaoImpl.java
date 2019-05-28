@@ -84,4 +84,26 @@ public class AccountDaoImpl implements IAccountDao {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * 根据名称查询
+     *
+     * @param name
+     * @return
+     */
+    public Account findAccByName(String name) {
+        try {
+            List<Account> namelist = runner.query("select * from accuser where name=?", new BeanListHandler<Account>(Account.class), name);
+
+            if (namelist==null || namelist.size()==0){
+                return null;
+            }
+            if (namelist.size()>1){
+                throw new RuntimeException("结果集不唯一");
+            }
+            return namelist.get(0);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
